@@ -11,6 +11,7 @@ function App() {
 
   useEffect(() => {
     checkWin()
+    checkIfTie()
     if (player == "X"){
       setPlayer("O")
      } else {
@@ -36,7 +37,6 @@ function App() {
   }
 
   const checkWin = () => {
-    checkIfTie()
     Patterns.forEach((currPatern) => {
       const firstPlayer = board[currPatern[0]]
       if (firstPlayer == "") {
